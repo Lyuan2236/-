@@ -16,7 +16,12 @@ def block_matching(ref_frame, curr_frame, block_size=8, search_range=4):
                     curr_x, curr_y = j + x, i + y
                     if 0 <= curr_x < w - block_size and 0 <= curr_y < h - block_size:
                         curr_block = curr_frame[curr_y:curr_y + block_size, curr_x:curr_x + block_size]
-                        error = np.sum(np.abs(ref_block - curr_block))
+
+                        #使用绝对误差作为相似度量
+                        # error = np.sum(np.abs(ref_block - curr_block))
+
+                        #使用均方误差作为相似度量
+                        error = np.sum((ref_block - curr_block) ** 2) / (block_size * block_size)
 
                         if error < min_error:
                             min_error = error
