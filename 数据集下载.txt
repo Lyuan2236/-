@@ -1,0 +1,3 @@
+数据集上传网盘下载慢，建议到github下载zip压缩包
+数据集地址：https://github.com/cystanford/text_classification
+打开页面，找到绿色[code]下拉框，选择[Download ZIP]下载
