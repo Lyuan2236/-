@@ -20,7 +20,7 @@ while True:
     prev_pts = cv2.goodFeaturesToTrack(prev_gray, mask=None, **feature_params)
     next_pts, status, _ = cv2.calcOpticalFlowPyrLK(prev_gray, next_gray, prev_pts, None, **lk_params)
 
-    #Draw optional flow vectors  绘制运动矢量
+    # 绘制运动矢量
     for i, (next_pt, prev_pt) in enumerate(zip(next_pts, prev_pts)):
         a, b = next_pt.ravel()
         c, d = prev_pt.ravel()
@@ -30,7 +30,7 @@ while True:
     # 显示运动矢量图
     cv2.imshow("Optical Flow",next_frame)
 
-    #Update the previous frame and points  # 更新前一帧和点
+    # 更新前一帧和点
     prev_gray = next_gray.copy()
     prev_pts = next_pts.reshape(-1,1,2)
 
