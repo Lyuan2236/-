@@ -1,3 +1,5 @@
+# 实现一种无监督或半监督的视频对象分割算法。
+# 数据集使用 DAVIS-2016 或 DAVIS-2017
 import os
 import cv2
 import numpy as np
