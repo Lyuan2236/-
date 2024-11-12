@@ -141,10 +141,6 @@ def semi_supervised_video_segmentation(dataset):
     cv2.destroyAllWindows()
 
 
-
-
-
-
 # 数据集路径
 video_dir = 'E:/学科/大四上/数字视频处理/DAVIS-2017-trainval-480p/DAVIS/JPEGImages/480p'
 annotations_dir = 'E:/学科/大四上/数字视频处理/DAVIS-2017-trainval-480p/DAVIS/Annotations/480p'
